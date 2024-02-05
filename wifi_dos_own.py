@@ -54,7 +54,7 @@ def set_monitor_mode(controller_name):
     subprocess.run(["ip", "link", "set", wifi_name, "up"])
 
 def set_band_to_monitor(choice):
-    """If you have a 5Ghz network interface controller you can use this function to put monitor either 2.4Ghz or 5Ghz bands or both."""
+  
     if choice == "0":
         # Bands b and g are 2.4Ghz WiFi Networks
         subprocess.Popen(["airodump-ng", "--band", "bg", "-w", "file", "--write-interval", "1", "--output-format", "csv", wifi_name], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
